@@ -1,5 +1,5 @@
 {
-  "homepage":"http://o-compaore.github.io/platly",
+  "homepage": "http://o-compaore.github.io/platly",
   "name": "material-dashboard-2-react",
   "version": "2.1.0",
   "private": true,
@@ -44,12 +44,13 @@
     "stylis": "4.0.13",
     "stylis-plugin-rtl": "2.1.1",
     "web-vitals": "2.1.4",
+    "webpack-cli": "^5.0.2",
     "yup": "0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
