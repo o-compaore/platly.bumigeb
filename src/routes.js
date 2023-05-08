@@ -48,8 +48,35 @@ import ResultatJaugeageList from "pages/technique/resultatJaugeage";
 import ResultatJaugeageNew from "pages/technique/resultatJaugeageNew";
 import ProgrammeJaugeage from "pages/technique/programmeJaugeage";
 
+// Login Page
+// import SignIn from "layouts/authentication/sign-in";
+
 // @mui icons
 import Icon from "@mui/material/Icon";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import EventIcon from '@mui/icons-material/Event';
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+
+function Logout (){
+  const myHeaders = {
+    "Authorization": `Token ${localStorage.getItem('token')}`,
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json'
+  }
+  const requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+  }; 
+  fetch("http://localhost:8000/api/authentification/logout/", requestOptions)
+  .then(response => {
+    if(response.status===200){
+      console.log('Ok ')
+    }
+  })
+  localStorage.clear()
+  window.location.replace(`/tableau-de-bord`);
+}
 
 const routes = [
   {
@@ -64,7 +91,7 @@ const routes = [
     type: "collapse",
     name: "Vehicules",
     key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <LocalShippingIcon fontSize="small" />,
     route: "/vehicules",
     component: <Vehicule />,
   },
@@ -77,15 +104,15 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Demande de jaugeage",
+    name: "Liste des demandes",
     key: "demande-jaugeage",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <ReceiptIcon fontSize="small" />,
     route: "/demande-jaugeage/liste",
     component: <DemandeList />,
   },
   {
     type: "collapse",
-    name: "Demande de jaugeage info",
+    name: "Info demande",
     key: "demande-jaugeage-info",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/demande-jaugeage/info/:id",
@@ -93,9 +120,9 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Demande de jaugeage Nouveau",
+    name: "Nouvelle demande",
     key: "demande-jaugeage-nouveau",
-    icon: <Icon fontSize="small">table_view</Icon>,
+    icon: <PostAddIcon fontSize="small" />,
     route: "/demande-jaugeage/nouveau",
     component: <DemandeNew />,
   },
@@ -109,6 +136,14 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Programme de jaugeage",
+    key: "programme-jaugeage",
+    icon: <EventIcon fontSize="small" />,
+    route: "/programme-jaugeage",
+    component: <ProgrammeJaugeage />,
+  },
+  {
+    type: "collapse",
     name: "Resultat de jaugeage",
     key: "resultat-jaugeage-info",
     icon: <Icon fontSize="small">table_view</Icon>,
@@ -117,19 +152,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Resultat de jaugeage nouveau",
+    name: "Nouveau resultat",
     key: "resultat-jaugeage-nouveau",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/resultat-jaugeage/nouveau/:id",
     component: <ResultatJaugeageNew />,
-  },
-  {
-    type: "collapse",
-    name: "Programme de jaugeage",
-    key: "programme-jaugeage",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/programme-jaugeage",
-    component: <ProgrammeJaugeage />,
   },
   {
     type: "divider",
@@ -145,6 +172,14 @@ const routes = [
     icon: <Icon fontSize="small">person</Icon>,
     route: "/profile",
     component: <Profile />,
+  },
+  {
+    type: "collapse",
+    name: "Se déconnecter",
+    key: "logout",
+    icon: <Icon fontSize="small">logout</Icon>,
+    route: "/logout",
+    component: <Logout />,
   },
  
 ];

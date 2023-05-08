@@ -26,17 +26,19 @@ import Icon from '@mui/icons-material/Visibility';
 export default function buildResultatData(data,handleOpen) {
     const Etat = ({ etat }) => (
         <MDBox lineHeight={1} textAlign="left">
-           {etat === "Devant" ? 
-            <MDBadge badgeContent={etat} color="success" variant="gradient" size="md" />:
-            <MDBadge badgeContent={etat} color="primary" variant="gradient" size="md" />
+           {etat === true &&
+            <MDBadge badgeContent="Accepté" color="success" variant="gradient" size="md" />
+           }
+           {etat === false &&
+            <MDBadge badgeContent="Rejeté" color="error" variant="gradient" size="md" />
            }
         </MDBox>
       );
       const Demande = ({ demande }) => (
         <MDBox lineHeight={1} textAlign="left">
-           <MDTypography component="p" fontWeight="medium">{demande.denomination}</MDTypography>
-           <MDTypography component="p" fontWeight="medium">{demande.id_chassis_citerne}</MDTypography>
-           <MDTypography component="p" fontWeight="medium">{demande.id_chassis_tracteur}</MDTypography>
+           <MDTypography component="p" variant="body" fontWeight="medium">Demandeur: {demande.denomination}</MDTypography>
+           <MDTypography component="p" variant="body" fontWeight="medium">Citerne: {demande.id_chassis_citerne}</MDTypography>
+           <MDTypography component="p" variant="body" fontWeight="medium">Tracteur: {demande.id_chassis_tracteur}</MDTypography>
         </MDBox>
       );
   return {
@@ -59,12 +61,12 @@ export default function buildResultatData(data,handleOpen) {
                       </MDBox>
                     ),
                     valeur: (
-                        <MDTypography component="p" variant="caption" color="text" fontWeight="medium">
+                        <MDTypography component="p" variant="body" color="text" fontWeight="medium">
                           {line.valeur}
                         </MDTypography>
                       ),
                     date: (
-                      <MDTypography component="p" variant="caption" color="text" fontWeight="medium">
+                      <MDTypography component="p" variant="body" color="text" fontWeight="medium">
                         {line.date}
                       </MDTypography>
                     ),

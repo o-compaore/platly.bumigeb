@@ -16,7 +16,7 @@ import { useState,useEffect} from "react";
 import {useParams } from 'react-router-dom';
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+// import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -88,8 +88,33 @@ function ResultatJaugeageNew() {
           setopenAlertError(true)
         }
       })
+    }
+    const  handleRejet = () =>{
+      const postData = {demande,etat,valeur}
+      console.log(postData)
+      const myHeaders = {
+        "Authorization": `Token ${localStorage.getItem('token')}`,
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
       }
-      const fetchDemandeData = () => {
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(postData)
+      };
+      fetch(URL.RESULTAT_DATA_REJET_URL, requestOptions,).then(res => {
+        if(res.status===201){
+          console.log(res.status)
+          setopenAlertError(true)
+          window.location.replace(`/resultat-jaugeage/liste`);
+        }else{
+          console.log("Error")
+          setopenAlertError(true)
+        }
+      })
+    }
+
+    const fetchDemandeData = () => {
         const myHeaders = {
           "Authorization": `Token ${localStorage.getItem('token')}`,
           'Accept': 'application/json, text/plain, */*',
@@ -136,7 +161,7 @@ function ResultatJaugeageNew() {
       <MDBox pt={6} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12}>
-            <Card>
+           
               <MDBox
                 mx={2}
                 mt={-3}
@@ -335,11 +360,11 @@ function ResultatJaugeageNew() {
                      <MDButton variant="gradient" color="success"  onClick={()=>handleSave()} >Enregistrer </MDButton>
                     </Grid>
                     <Grid item >
-                     <MDButton variant="gradient" color="error"  onClick={()=>handleSave()} >Rejeter </MDButton>
+                     <MDButton variant="gradient" color="error"  onClick={()=>handleRejet()} >Rejeter </MDButton>
                     </Grid>
                 </Grid>
                 </MDBox>
-            </Card>
+           
           </Grid>
         </Grid>
       </MDBox>

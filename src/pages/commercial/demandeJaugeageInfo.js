@@ -101,7 +101,15 @@ function DemandeInfo() {
     }, [])
     
     const  handleDelete = () =>{
-      console.log('Deleting')
+      const myHeaders = {"Authorization": `Token ${localStorage.getItem('token')}`}
+      const requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+      };
+      fetch(`${URL.DELETE_DEMANDE_DATA_URL}?id=${id}`,requestOptions)
+      .then(response => response.json()).then(() => window.location.replace(`/demande-jaugeage/liste`)
+        )
+      ;
     }
     
     const  handleSave = () =>{

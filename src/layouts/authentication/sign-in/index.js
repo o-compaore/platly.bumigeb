@@ -34,7 +34,9 @@ import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 // API URL
 import URL from "statics"
 
-function Basic() {
+import PropTypes from 'prop-types';
+
+function Basic({setToken}) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
  
@@ -54,12 +56,9 @@ function Basic() {
       return null
     })
     .then(resData => {
+     
       if(resData){
-        localStorage.setItem('token', resData.access_token);
-        localStorage.setItem('user_role', resData.user_role);
-        localStorage.setItem('expire_in', resData.expire_in);
-        localStorage.setItem('user_name', resData.user_name);
-        localStorage.setItem('user_mail', resData.user_mail);
+        setToken(resData)
       }else{
         console.log("Error")
       }
@@ -104,6 +103,10 @@ function Basic() {
       </Card>
     </BasicLayout>
   );
+}
+
+Basic.propTypes = {
+  setToken: PropTypes.func.isRequired
 }
 
 export default Basic;

@@ -30,7 +30,7 @@ export default function buildvehiculesData(data,handleOpen) {
   
   const Car = ({ image, licence }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
-      <MDAvatar  onClick={() => handleOpen(image,licence)} src={`${URL.VEHICLES_PHOTO_URL}?photo=${image}`} name={licence} size="xl" />
+      <MDAvatar  onClick={() => handleOpen(image,licence)} src={`${URL.VEHICLES_PHOTO_URL}?photo=${image}`} name={licence} variant="square" size="xl" />
       <MDBox ml={2} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {licence}

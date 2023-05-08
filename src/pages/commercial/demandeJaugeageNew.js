@@ -299,7 +299,7 @@ function DemandeNew() {
                   </Grid>
                   <Grid item xs={2} >
                     <MDBox display="flex" alignItems="center" lineHeight={1}>
-                      <MDAvatar src={`${URL.QRCODE_IMAGE_URL}?photo=${uuid}.png`} size="xl" />
+                      <MDAvatar id={uuid} src={`${URL.QRCODE_IMAGE_URL}?photo=${uuid}.png`} size="xl" variant="square" />
                     </MDBox>
                   </Grid>
                 </Grid>

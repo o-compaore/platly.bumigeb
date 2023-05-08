@@ -48,8 +48,11 @@ import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "co
 // Images
 import brandWhite from "assets/images/logos/platly.png";
 
+import useToken from "useToken";
 
 export default function App() {
+
+  const { token, setToken } = useToken();
 
   const [controller, dispatch] = useMaterialUIController();
   const {
@@ -64,7 +67,7 @@ export default function App() {
   const [onMouseEnter, setOnMouseEnter] = useState(false);
 
   const { pathname } = useLocation();
-
+  
 
   // Open sidenav when mouse enter on mini sidenav
   const handleOnMouseEnter = () => {
@@ -132,10 +135,10 @@ export default function App() {
       </Icon>
     </MDBox>
   );
-  
-  if(! localStorage.getItem('token')) {
+   
+  if(! token) {
     return (  <ThemeProvider theme={darkMode ? themeDark : theme}>
-      <SignIn />
+      <SignIn setToken={setToken} />
       </ThemeProvider>)
   }
 

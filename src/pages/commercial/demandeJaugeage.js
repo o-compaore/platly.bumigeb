@@ -90,7 +90,7 @@ function DemandeList() {
                     </MDTypography>
                   </Grid>
                   <Grid item >
-                    <MDButton component="a" color="info" href='/demande-jaugeage/add' size="medium">Créer une nouvelle demande</MDButton>
+                    <MDButton component="a" color="info" href='/demande-jaugeage/nouveau' size="medium">Créer une nouvelle demande</MDButton>
                   </Grid>
                  </Grid>
               </MDBox>
