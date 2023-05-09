@@ -12,10 +12,6 @@ module.exports = {
         chunkFilename: '[id].[hash:8].js'
     },
     resolve: {
-        root: [
-            path.resolve('./app/src'),
-            path.resolve('./vendor/modules')
-        ],
         extensions: ['.js', '.jsx']
     },
     module: {
