@@ -1,24 +1,36 @@
-var path = require('path');
-let webpack = require("webpack");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: {
-        app: './src/App.js',
-        vendor: ["react","react-dom"]
-    },
+    mode: 'development',
+    entry: path.resolve(__dirname, 'src/index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash:8].js',
         sourceMapFilename: '[name].[hash:8].map',
         chunkFilename: '[id].[hash:8].js'
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [{
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader?cacheDirectory=true',
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             }
-        }]
-    }
-};
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./public/index.html",
+            filename: "./index.html"
+         })
+    ]
+}
