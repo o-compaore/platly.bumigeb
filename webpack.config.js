@@ -1,20 +1,22 @@
 var path = require('path');
-var webpack = require('webpack');
+let webpack = require("webpack");
 
 module.exports = {
-  entry: './index',
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ]
-  }
-}
+    entry: {
+        app: './src/App.js',
+        vendor: ["react","react-dom"]
+    },
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, '../public')
+    },
+    module: {
+        rules: [{
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader?cacheDirectory=true',
+            }
+        }]
+    }
+};
