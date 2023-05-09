@@ -7,7 +7,7 @@ module.exports = {
         vendor: ["react","react-dom"]
     },
     output: {
-        filename: 'bundle.js',
+        filename: 'platly.js',
         path: path.resolve(__dirname, '../public')
     },
     module: {
