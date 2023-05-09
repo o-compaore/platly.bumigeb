@@ -24,31 +24,31 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
 // Login Page
-import SignIn from "./layouts/authentication/sign-in";
+import SignIn from "layouts/authentication/sign-in";
 
 // Material Dashboard 2 React components
-import MDBox from "./components/MDBox";
+import MDBox from "components/MDBox";
 
 // Material Dashboard 2 React example components
-import Sidenav from "./examples/Sidenav";
-import Configurator from "./examples/Configurator";
+import Sidenav from "examples/Sidenav";
+import Configurator from "examples/Configurator";
 
 // Material Dashboard 2 React themes
-import theme from "./assets/theme";
+import theme from "assets/theme";
 
 // Material Dashboard 2 React Dark Mode themes
-import themeDark from "./assets/theme-dark";
+import themeDark from "assets/theme-dark";
 
 // Material Dashboard 2 React routes
-import routes from "./routes";
+import routes from "routes";
 
 // Material Dashboard 2 React contexts
-import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "./context";
+import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
-import brandWhite from "./assets/images/logos/platly.png";
+import brandWhite from "assets/images/logos/platly.png";
 
-import useToken from "./useToken";
+import useToken from "useToken";
 
 export default function App() {
 

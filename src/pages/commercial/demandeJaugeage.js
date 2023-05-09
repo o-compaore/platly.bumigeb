@@ -18,20 +18,20 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
-import MDBox from "./components/MDBox";
-import MDTypography from "./components/MDTypography";
+import MDBox from "components/MDBox";
+import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React example components
-import DashboardLayout from "./examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "./examples/Navbars/DashboardNavbar";
-import Footer from "./examples/Footer";
-import DataTable from "./examples/Tables/DataTable";
-import MDInput from './components/MDInput'
-import MDButton from "./components/MDButton";
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import DataTable from "examples/Tables/DataTable";
+import MDInput from 'components/MDInput'
+import MDButton from "components/MDButton";
 import Icon from "@mui/material/Icon";
-import URL from "./statics";
+import URL from "statics";
 // Data
-import buildDemandeData from "./pages/commercial/data";
+import buildDemandeData from "pages/commercial/data";
 
 
 function DemandeList() {

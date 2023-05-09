@@ -28,8 +28,8 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Input components
-import MDInput from './components/MDInput'
-import MDButton from "./components/MDButton";
+import MDInput from 'components/MDInput'
+import MDButton from "components/MDButton";
 import Icon from "@mui/material/Icon";
 
 import Box from '@mui/material/Box';
@@ -41,8 +41,8 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Modal from '@mui/material/Modal';
 
 // Data
-import buildvehiculesData from "./pages/vehicules/data";
-import URL from "./statics";
+import buildvehiculesData from "pages/vehicules/data";
+import URL from "statics";
 
 function Vehicule() {
  
