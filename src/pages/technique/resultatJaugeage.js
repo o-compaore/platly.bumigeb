@@ -19,23 +19,23 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
 
 // Material Dashboard 2 React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import DataTable from "examples/Tables/DataTable";
-import MDInput from 'components/MDInput'
-import MDButton from "components/MDButton";
+import DashboardLayout from "./examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "./examples/Navbars/DashboardNavbar";
+import Footer from "./examples/Footer";
+import DataTable from "./examples/Tables/DataTable";
+import MDInput from './components/MDInput'
+import MDButton from "./components/MDButton";
 import Icon from "@mui/material/Icon";
 import Modal from '@mui/material/Modal';
 import { useReactToPrint } from 'react-to-print';
 
 // Data
-import buildResultatData from "pages/technique/data";
-import URL from "statics";
+import buildResultatData from "./pages/technique/data";
+import URL from "./statics";
 // Scanner module
 import {Html5Qrcode} from "html5-qrcode";
 

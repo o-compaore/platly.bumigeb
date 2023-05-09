@@ -19,25 +19,25 @@ import Card from "@mui/material/Card";
 
 import { useReactToPrint } from 'react-to-print';
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
 
 // Material Dashboard 2 React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from "./examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "./examples/Navbars/DashboardNavbar";
+import Footer from "./examples/Footer";
 
 // Form UI
-import MDInput from 'components/MDInput'
-import MDButton from "components/MDButton";
-import MDAlert from "components/MDAlert";
+import MDInput from './components/MDInput'
+import MDButton from "./components/MDButton";
+import MDAlert from "./components/MDAlert";
 import Collapse from '@mui/material/Collapse';
 // import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Divider from "@mui/material/Divider";
-import MDAvatar from "components/MDAvatar";
+import MDAvatar from "./components/MDAvatar";
 
-import URL from "statics";
+import URL from "./statics";
 
 
 function DemandeNew() {

@@ -17,17 +17,17 @@ import { useEffect} from "react";
 import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
 
 // Material Dashboard 2 React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from "./examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "./examples/Navbars/DashboardNavbar";
+import Footer from "./examples/Footer";
 
 // Calendar module
 import { Calendar } from 'fullcalendar'
-import URL from "statics";
+import URL from "./statics";
 // Scanner module
 import {Html5Qrcode} from "html5-qrcode";
 

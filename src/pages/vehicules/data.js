@@ -16,15 +16,15 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
-import MDBadge from "components/MDBadge";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
+import MDAvatar from "./components/MDAvatar";
+import MDBadge from "./components/MDBadge";
 // Materials Icon
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
-import URL from "statics";
+import URL from "./statics";
 
 export default function buildvehiculesData(data,handleOpen) {
   

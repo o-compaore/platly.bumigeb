@@ -36,17 +36,17 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React layouts
-import Dashboard from "layouts/dashboard";
-import Profile from "layouts/profile";
+import Dashboard from "./layouts/dashboard";
+import Profile from "./layouts/profile";
 
 // Platly interfaces
-import Vehicule from "pages/vehicules";
-import DemandeList from "pages/commercial/demandeJaugeage";
-import DemandeInfo from "pages/commercial/demandeJaugeageInfo";
-import DemandeNew from "pages/commercial/demandeJaugeageNew";
-import ResultatJaugeageList from "pages/technique/resultatJaugeage";
-import ResultatJaugeageNew from "pages/technique/resultatJaugeageNew";
-import ProgrammeJaugeage from "pages/technique/programmeJaugeage";
+import Vehicule from "./pages/vehicules";
+import DemandeList from "./pages/commercial/demandeJaugeage";
+import DemandeInfo from "./pages/commercial/demandeJaugeageInfo";
+import DemandeNew from "./pages/commercial/demandeJaugeageNew";
+import ResultatJaugeageList from "./pages/technique/resultatJaugeage";
+import ResultatJaugeageNew from "./pages/technique/resultatJaugeageNew";
+import ProgrammeJaugeage from "./pages/technique/programmeJaugeage";
 
 // Login Page
 // import SignIn from "layouts/authentication/sign-in";

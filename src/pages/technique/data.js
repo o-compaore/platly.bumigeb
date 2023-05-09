@@ -16,11 +16,11 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography"; 
-import MDBadge from "components/MDBadge";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography"; 
+import MDBadge from "./components/MDBadge";
 
-import MDButton from "components/MDButton";
+import MDButton from "./components/MDButton";
 import Icon from '@mui/icons-material/Visibility';
 
 export default function buildResultatData(data,handleOpen) {

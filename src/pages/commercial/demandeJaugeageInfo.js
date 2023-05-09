@@ -19,21 +19,21 @@ import Grid from "@mui/material/Grid";
 
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
 
 // Material Dashboard 2 React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from "./examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "./examples/Navbars/DashboardNavbar";
+import Footer from "./examples/Footer";
 
 // Form UI
-import MDInput from 'components/MDInput'
-import MDButton from "components/MDButton";
+import MDInput from './components/MDInput'
+import MDButton from "./components/MDButton";
 
 // Printing module
 import { useReactToPrint } from 'react-to-print';
-import URL from "statics";
+import URL from "./statics";
 
 function DemandeInfo() {
     const componentRef = useRef();
@@ -103,7 +103,7 @@ function DemandeInfo() {
     const  handleDelete = () =>{
       const myHeaders = {"Authorization": `Token ${localStorage.getItem('token')}`}
       const requestOptions = {
-        method: 'DELETE',
+        method: 'DELETE./',
         headers: myHeaders,
       };
       fetch(`${URL.DELETE_DEMANDE_DATA_URL}?id=${id}`,requestOptions)

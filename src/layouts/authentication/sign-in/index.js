@@ -20,19 +20,19 @@ import { useState } from "react";
 import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
-import MDButton from "components/MDButton";
+import MDBox from "./components/MDBox";
+import MDTypography from "./components/MDTypography";
+import MDInput from "./components/MDInput";
+import MDButton from "./components/MDButton";
 
 // Authentication layout components
-import BasicLayout from "layouts/authentication/components/BasicLayout";
+import BasicLayout from "./layouts/authentication/components/BasicLayout";
 
 // Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from "./assets/images/bg-sign-in-basic.jpeg";
 
 // API URL
-import URL from "statics"
+import URL from "./statics"
 
 import PropTypes from 'prop-types';
 
