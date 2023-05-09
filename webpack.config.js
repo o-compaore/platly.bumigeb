@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    context: __dirname + "/src",
+    mode: 'production',
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -11,15 +12,23 @@ module.exports = {
         chunkFilename: '[id].[hash:8].js'
     },
     resolve: {
+        root: [
+            path.resolve('./app/src'),
+            path.resolve('./vendor/modules')
+        ],
         extensions: ['.js', '.jsx']
     },
     module: {
         rules: [{
                 test: /\.(js|jsx)$/,
+                include: [
+                    path.resolve(__dirname, "app/src"),
+                    path.resolve(__dirname, "app/test")  
+                ],
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
-                }
+                },
             },
             {
                 test: /\.css$/i,
